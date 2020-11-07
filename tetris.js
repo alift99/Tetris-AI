@@ -75,7 +75,7 @@ let gameOver = false;
 function drop(){
     let now = Date.now();
     let delta = now - dropStart;
-    if(delta > 2.5){
+    if(delta > 25){
         activePiece.moveDown();
         dropStart = Date.now();
     }
