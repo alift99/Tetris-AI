@@ -35,7 +35,7 @@ Board.prototype.draw = function () {
 
 Board.prototype.isLine = function(row){
     for(var c = 0; c < COL; c++){
-        if (this.colors[row][c] == 0){
+        if (this.colors[row][c] == VACANT){
             return false;
         }
     }
@@ -79,9 +79,9 @@ Board.prototype.holes = function(){
     for(var c = 0; c < COL; c++){
         var block = false;
         for(var r = 0; r < ROW; r++){
-            if (this.colors[r][c] != 0) {
+            if (this.colors[r][c] != VACANT) {
                 block = true;
-            }else if (this.colors[r][c] == 0 && block){
+            }else if (this.colors[r][c] == VACANT && block){
                 count++;
             }
         }
