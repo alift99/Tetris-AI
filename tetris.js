@@ -17,8 +17,7 @@ function drawSquare(x,y,color){
 let board = new Board();
 board.isMain = true;
 board.draw();
-let ai = new AI(0.9427764358621548, 0.25706530487082674, -0.012974774919638865, 0.21194734306073829);
-//heightWeight":0.9427764358621548,"linesWeight":0.25706530487082674,"holesWeight":-0.012974774919638865,"bumpinessWeight":0.21194734306073829,
+let ai = new AI(0.6457577777662875, 0.4407774298653426, 0.5651677707928751, 0.2632442603983253); //fitness 375
 
 // the pieces and their colors
 
@@ -75,7 +74,7 @@ let gameOver = false;
 function drop(){
     let now = Date.now();
     let delta = now - dropStart;
-    if(delta > 25){
+    if(delta > 10){
         activePiece.moveDown();
         dropStart = Date.now();
     }
