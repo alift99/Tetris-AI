@@ -51,13 +51,18 @@ AI.prototype._best = function(board, piece){
         var score = null;
         score = -this.heightWeight * _board2.aggregateHeight() - this.holesWeight * _board2.holes() - this.bumpinessWeight * _board2.bumpiness() + this.linesWeight * _board2.lines();
         // score = Math.random();
+        if(_board2.gameLost){
+            score -= 1000;
+        }
         console.log(score);
-        console.table(bestBoard.colors);
         if (score > bestScore || bestScore == null){
             bestScore = score;
             best = _piece.clone();
+            bestBoard = _board2;
         }
     }
+    console.log(bestScore);
+    console.table(bestBoard.colors);
     return best;
 };
 
