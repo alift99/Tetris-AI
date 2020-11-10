@@ -289,7 +289,7 @@ Piece.prototype.lock = function(){
         for( c = 0; c < COL; c++){
             isRowFull = isRowFull && (this.board.colors[r][c] != VACANT);
         }
-        if(isRowFull){
+        if(isRowFull && this.mainPiece){
             // if the row is full
             // we move down all the rows above it
             for( y = r; y > 1; y--){
@@ -310,8 +310,12 @@ Piece.prototype.lock = function(){
     // update the board
     this.board.draw();
     if(this.mainPiece){
-        activePiece = randomPiece();
-        activePiece = ai.best(board,activePiece);
+        let workingPieces = Array(2);
+        workingPieces[0] = randomPiece();
+        workingPieces[1] = randomPiece();
+        console.log(workingPieces[0]);
+        console.log(workingPieces[1]);
+        activePiece = ai.best(board,workingPieces);
         activePiece.mainPiece = true;
         activePiece.board = board;
     }
