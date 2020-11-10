@@ -55,7 +55,7 @@ function swapPiece(){
 
 //document.addEventListener("keydown",CONTROL);
 
-/*
+
 function CONTROL(event){
     if(event.keyCode == 37){
         activePiece.moveLeft();
@@ -70,7 +70,7 @@ function CONTROL(event){
         activePiece.moveDown();
     }
 }
-*/
+
 
 // drop the piece every 1sec
 
