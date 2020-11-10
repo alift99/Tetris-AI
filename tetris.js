@@ -17,7 +17,10 @@ function drawSquare(x,y,color){
 let board = new Board();
 board.isMain = true;
 board.draw();
+//let ai = new AI(0.41932628516176146,0.35151731899712757,0.6622148692076432,0.5119301788504101);
+//let ai = new AI(0.510066, 0.760666, 0.35663, 0.184483); //default
 let ai = new AI(0.6457577777662875, 0.4407774298653426, 0.5651677707928751, 0.2632442603983253); //fitness 375
+//heightWeight":0.9427764358621548,"linesWeight":0.25706530487082674,"holesWeight":-0.012974774919638865,"bumpinessWeight":0.21194734306073829,
 
 // the pieces and their colors
 
@@ -52,6 +55,7 @@ function swapPiece(){
 
 document.addEventListener("keydown",CONTROL);
 
+/*
 function CONTROL(event){
     if(event.keyCode == 37){
         activePiece.moveLeft();
@@ -66,6 +70,7 @@ function CONTROL(event){
         activePiece.moveDown();
     }
 }
+*/
 
 // drop the piece every 1sec
 
