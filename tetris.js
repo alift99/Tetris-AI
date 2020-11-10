@@ -53,7 +53,7 @@ function swapPiece(){
 
 // CONTROL the piece
 
-document.addEventListener("keydown",CONTROL);
+//document.addEventListener("keydown",CONTROL);
 
 /*
 function CONTROL(event){
